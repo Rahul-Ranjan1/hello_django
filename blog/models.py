@@ -13,7 +13,7 @@ class Person(models.Model):
     password = models.CharField(max_length = 250)
     pic = models.ImageField(upload_to = 'images/', null = True, verbose_name = "")
     BAN = models.CharField(max_length = 250)
-    chat = models.CharField(max_length = 1024*1024)    
+    chat = models.CharField(max_length = 1024)    
 
     def __str__(self):
         return self.username
@@ -23,7 +23,7 @@ class Image(models.Model):
     email = models.CharField(max_length = 250)
     image_file = models.ImageField(upload_to = 'images/', null = True, verbose_name = "")
     auto = models.AutoField(primary_key = True)
-    comments = models.CharField(max_length = 1024*1024)
+    comments = models.CharField(max_length = 1024)
 
     BAN = models.CharField(max_length = 250)
     
@@ -33,7 +33,7 @@ class Image(models.Model):
 class Chat(models.Model):
     auto = models.AutoField(primary_key = True)
     username = models.CharField(max_length = 250)
-    chat = models.CharField(max_length = 1024*1024)
+    chat = models.CharField(max_length = 1024)
      
 
     def __str__(self):
@@ -42,7 +42,7 @@ class Chat(models.Model):
 class Box(models.Model):
     sender = models.CharField(max_length = 250)
     receiver = models.CharField(max_length = 250)
-    chat = models.CharField(max_length = 1024*1024)
+    chat = models.CharField(max_length = 1024)
     auto = models.AutoField(primary_key = True)
     notification = models.PositiveIntegerField()
 
