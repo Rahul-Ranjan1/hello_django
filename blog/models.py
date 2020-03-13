@@ -13,7 +13,7 @@ class Person(models.Model):
     password = models.CharField(max_length = 250)
     pic = models.ImageField(upload_to = 'images/', null = True, verbose_name = "")
     BAN = models.CharField(max_length = 250)
-    chat = models.CharField(max_length = 1024*1024*1024*1024)    
+    chat = models.CharField(max_length = 1024*1024)    
 
     def __str__(self):
         return self.username
