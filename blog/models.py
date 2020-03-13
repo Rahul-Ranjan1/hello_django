@@ -33,7 +33,7 @@ class Image(models.Model):
 class Chat(models.Model):
     auto = models.AutoField(primary_key = True)
     username = models.CharField(max_length = 250)
-    chat = models.CharField(max_length = 1024*1024*1024*1024)
+    chat = models.CharField(max_length = 1024*1024)
      
 
     def __str__(self):
